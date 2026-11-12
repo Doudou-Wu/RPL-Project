@@ -52,8 +52,7 @@ Original and generated images are encoded using the same frozen VICReg encoder t
 For each original, compare the mean reference-to-sample distance $D_{xs}$ with the mean sample-to-sample distance $D_{ss}$. 
 
 
-$r=\frac{\operatorname{mean}i D{xs,i}}
-{\operatorname{mean}i D{ss,i}}.$
+$r=\frac{\text{mean}_i D_{xs,i}}{\text{mean}_i D_{ss,i}}.$
 
 Each reference is also ranked by its average distance to the other nine members; higher ranks indicate greater outlyingness.
 
