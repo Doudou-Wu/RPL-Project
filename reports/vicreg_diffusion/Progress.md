@@ -83,4 +83,3 @@ Original embedding sanity check: maximum absolute error ≈ 1.0e-5.
 3. **GT-latent control experiment:** Train a separate diffusion decoder conditioned on ground-truth latents from TLT12, as a control to investigate the causes of blurry reconstructions.
 
 
-
