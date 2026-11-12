@@ -41,7 +41,7 @@ Let $\hat{x}_k=G(h,\epsilon_k)$, where $h=E(x)$.
 - **Shuffled h: other**: $G(E(x_o),\epsilon_0)$: same noise as draw 0, but a different-class image’s embedding.
 
 **Figure 1:** Original images, repeated conditional samples, reference images, and matched-noise shuffled-condition samples.
-![](examples.png)
+![](img/examples.png)
 
 ## 3. Exchangeability evaluation
 
@@ -72,7 +72,7 @@ If the reference and generated samples are exchangeable, the reference should ap
 We estimate uncertainty by repeatedly resampling whole image groups within each class. To test the distance difference, we randomly reassign the reference within each group and compare the results with the observed difference. 
 
 **Figure 2**: Rank distributions in the frozen VICReg embedding space. 
-![](rank_histograms_embedding.png)
+![](img/rank_histograms_embedding.png)
 
 Rows show cosine distance and L2 distance; columns show the four reference conditions. Each group contains one reference and nine generated samples. Rank 1 indicates the lowest average distance to the other members, and rank 10 the highest. The dashed line marks the expected frequency of 10% under exchangeability. Each panel also reports the distance ratio $r=\bar D_{xs}/\bar D_{ss}$.
 
@@ -104,7 +104,7 @@ Generated embeddings have smaller norms than original embeddings, which may cont
 After normalizing each embedding to unit length, the L2 distance ratio decreases from 1.127 to 0.878. The proportion of originals at rank 10 falls from 31.9% to 0.5%, matching the cosine result. This shows that embedding magnitude substantially affects the raw L2 outlyingness pattern. 
 
 **Figure 3**: Comparison of exchangeability rank distributions using cosine distance, raw L2 distance, and L2 distance after unit normalization of embeddings.
-![](rank_histograms_embedding_l2normalized.png)
+![](img/rank_histograms_embedding_l2normalized.png)
 
 
 However, normalization does not restore exchangeability: original embeddings are now more central than generated embeddings.
@@ -117,6 +117,6 @@ Four distances are evaluated separately: RGB, grayscale, low-frequency RGB (8×8
 
 
 **Figure 4**: Rank histograms for four distances and four reference conditions. The dashed line marks the uniform expectation of 10%.
-![](rank_histograms.png)
+![](img/rank_histograms.png)
 
 Original images tend to be farther from the generated samples than the samples are from each other in RGB, grayscale, and low-frequency comparisons. Average colors show a distance ratio close to 1, but their ranks are still not uniform. Like the embedding-space results, these findings show that originals and generated samples are not fully exchangeable, although the direction of the difference depends on the distance used.
