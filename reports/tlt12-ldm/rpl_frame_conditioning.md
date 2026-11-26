@@ -18,7 +18,7 @@
 
 **Columns in Table 3** (read from every frame by a probe trained on real frames):
 
-- **object_acc:** fraction of frames showing the true object (12 classes × 20 objects; chance ≈ 0.05 within the class).
+- **object_acc:** fraction of frames showing the true object (12 classes × 10 objects; chance ≈ 0.10 within the class).
 - **consistency:** how stable the predicted object is over the 32 frames.
 - **jerk:** smoothness of the probed factor trajectories (lower is smoother).
 - **track_err:** mean absolute error between probed and true factors.
